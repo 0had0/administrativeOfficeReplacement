@@ -1,0 +1,21 @@
+[ignore]
+node_modules
+public
+
+[include]
+
+[libs]
+
+[lints]
+all=warn
+"cannot-resolve-name"=off
+
+[options]
+module.name_mapper='^\([^\.].*\)$' -> '<PROJECT_ROOT>/src/\1'
+emoji=true
+all=true
+
+[strict]
+
+[declarations]
+<PROJECT_ROOT>/src/types/*.type.js

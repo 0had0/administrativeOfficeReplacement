@@ -1,23 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { QueryClient, QueryClientProvider } from "react-query";
+import { Provider } from "react-redux";
+import createServer from "mock-api";
 
+import store from "store/store";
 import App from "./App";
 
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
-import createServer from "mock-api";
-
 createServer();
-
-const queryClient = new QueryClient();
 
 ReactDOM.render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
+    <Provider store={store}>
       <App />
-    </QueryClientProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

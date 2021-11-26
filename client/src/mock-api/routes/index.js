@@ -6,6 +6,10 @@ const routes = function () {
       status: 200,
     };
   });
+  this.post("/api/login", () => ({
+    result: { id: 1 },
+    status: 200,
+  }));
 };
 
 export default routes;
